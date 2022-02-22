@@ -3,12 +3,12 @@
 set -e
 set -x
 
-echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+#echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
-docker build -t tiangolo/node-frontend:10 .
+docker build -t  registry.gitlab.com/yoholida/node-frontend:16.13 .
 
-docker build -t tiangolo/node-frontend:latest .
+docker build -t registry.gitlab.com/yoholida/node-frontend:latest .
 
-docker push tiangolo/node-frontend:10
+docker push registry.gitlab.com/yoholida/node-frontend:16.13
 
-docker push tiangolo/node-frontend:latest
+docker push registry.gitlab.com/yoholida/node-frontend:latest
